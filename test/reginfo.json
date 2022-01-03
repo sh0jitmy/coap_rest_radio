@@ -1,0 +1,26 @@
+{
+	"F_REGISTER3":{
+		"regmask":"0xFFFFFFFF",
+		"bitshift":0,
+		"propname":"monitor1",
+		"type":"monitor"
+	},
+	"F_REGISTER4":{
+		"regmask":"0xFFFFFFFF",
+		"bitshift":0,
+		"propname":"monitor2",
+		"type":"monitor"
+	},
+	"F_REGISTER5":{
+		"regmask":"0xFFFFFFFF",
+		"bitshift":0,
+		"propname":"status1",
+		"type":"status"
+	},
+	"F_REGISTER6":{
+		"regmask":"0x80000000",
+		"bitshift":31,
+		"propname":"status2",
+		"type":"status"
+	}
+}

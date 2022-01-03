@@ -1,5 +1,5 @@
 import json
-import regdao
+import radiorepos 
 
 
 REG_KEY = 0
@@ -8,20 +8,17 @@ REG_VALUE =1
 
 class RadioController(object):
 	def __init__(self):
-		self.regdao = regdao.RegDao("procpath.txt","sts.json","monitor.json") 
+		self.repos = radiorepos.Repositry("radiorepos.json") 
 	def set_control(self,dictdata):
-		#return self.regdao.write_register(dictdata)
-		return  {"errorcode" : "success","reason":"success"} 
+		res_dict = self.repos.update(dictdata)	
+		return  res_dict 
 	
 	def get_status(self):
-		#dictdata = self.regdao.read_stsregister()
-		#dictdata = self.regdao.read_stsregister()
-		dictdata =   {"errorcode" : "success","reason":"success"} 
+		dictdata = self.repos.find("status")	
 		return dictdata
 
 	def get_monitor(self):
-		#dictdata = self.regdao.read_monregister(monreg_dict)
-		dictdata =   {"monitor1" : "sample1","monitor2":"sample2"} 
+		dictdata = self.repos.find("monitor")	
 		return dictdata
 	
 

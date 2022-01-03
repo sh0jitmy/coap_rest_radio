@@ -1,0 +1,6 @@
+{
+	"regpath"  : "test/procdummy.txt",
+	"contconf" : "test/transreg.json",
+	"regconf"  : "test/reginfo.json",
+	"transmodule" : "transmodule/transdata.py"
+}	

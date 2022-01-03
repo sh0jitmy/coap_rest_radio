@@ -1,0 +1,12 @@
+{
+	"freq":{
+		"regname":"F_REGISTER1",
+		"regmask":"0xFFFFFFFF",
+		"bitshift":0
+	},
+	"power":{
+		"regname":"F_REGISTER2",
+		"regmask":"0xFFFFFFFF",
+		"bitshift":0
+	}
+}
