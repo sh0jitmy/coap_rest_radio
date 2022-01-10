@@ -23,10 +23,10 @@ class RestController(object):
 		print("coap.get",data)
 		return data
 
-	def update_register(self,req,async_en):
+	def update_register(self,req):
 		return self.coap.update("register",req)	
 	
-	def update_radio(self,req,async_en):
+	def update_radio(self,req):
 		return self.coap.update("control",req)	
 
 	

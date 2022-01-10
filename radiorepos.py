@@ -10,14 +10,15 @@ class Repositry(object):
 		regpath = daoconf["regpath"]
 		contconf = daoconf["contconf"]
 		regconf = daoconf["regconf"]
-		transconf = daoconf["transmodule"]
-		self.dao = pyregdao.RegDao(regpath,contconf,regconf,transconf) 		
+		transconf = daoconf["get_trans"]
+		update_transconf = daoconf["update_trans"]
+		self.dao = pyregdao.RegDao(regpath,contconf,regconf,transconf,update_transconf) 		
 	def update(self,dictdata):
-		error = self.dao.update(dictdata)
+		dictdata,error = self.dao.update(dictdata)
 		if not error :
-			return {"status":"OK","msg":"success"}
+			return {"status":"OK","res":dictdata}
 		else :
-			return {"status":"NG","msg":error}
+			return {"status":"NG","res":dictdata}
 		 
 	def find(self,typename):
 		print("repos find call")

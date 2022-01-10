@@ -2,5 +2,6 @@
 	"regpath"  : "test/procdummy.txt",
 	"contconf" : "test/transreg.json",
 	"regconf"  : "test/reginfo.json",
-	"transmodule" : "transmodule/transdata.py"
+	"get_trans" : "transmodule/getrrans.py",
+	"update_trans" : "transmodule/updatetrans.py"
 }	

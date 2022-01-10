@@ -25,9 +25,12 @@ def read_radio():
 
 @put('/control')
 def update_radio():
-        request_dict = json.loads(request.json)
-        print("req",request_dict) 
-        res = cont.update_radio(request_dict,False)
+        print("request json",request.json) 
+        #return request.json
+        #request_dict = json.loads(request.json)
+        #request_dict = json.loads(request.body)
+        #print("req",request_dict) 
+        res = cont.update_radio(request.json)
         if res == True : 
             return request.json
         else :
